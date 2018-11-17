@@ -1,14 +1,13 @@
 import java.util.Scanner;
 public class New {
-
 	private static Scanner sc;
-	
 	public static void main(String[] args) {
 
 		sc = new Scanner(System.in);
 		int Respuesta;
 		int Respuesta2;
 		String Nombre = new String ("");
+		String Sexo = new String ("");
 		String Respuesta3 = new String ("");
 		System.out.println("+ Wena, ¿Quién erí?");
 		System.out.print("	1. - No preguntí weás."+"\n"+
@@ -130,6 +129,58 @@ public class New {
 			case "No": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
 			case "NO": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
 			default:  System.out.println("No entiendo niuna weá! Chucha, llegaron..."+"\n"+"	- Has muerto");  System.exit(0); break;
+		}
+		System.out.println("	*	*	*	"+"\n"+"- Corrimos un rato sin decir nada -.");
+		System.out.print("	1. - ¿Dónde vamos?."+"\n"+
+		"	2. - Espera, realmente, ¿Qué está ocurriendo?"
+		+"\n"+"	3. - ¿Por qué me ayudas?"+"\n");
+		Respuesta2 = sc.nextInt();
+		switch(Respuesta2){
+		case 1:
+			System.out.println("+ Mmmh? No muy lejos hay unas personas que nos podrían ayudar.");
+			System.out.println("+ Podremos luchar contra los caídos si es que nos unimos.");
+			System.out.println("+ Venga, no tengas miedo :D");
+			System.out.println("+ No seas... Uh... Espera, ¿Qué eres? (HOMBRE/MUJER)");
+			break;
+		case 2:
+			switch(Respuesta){
+			case 1:
+				System.out.println("+ Espera, ¿Acaso lo que me dijiste no era en serio?");
+				System.out.println("+ Me siento algo estafado...");
+				System.out.println("+ En fin, tengo unos conocidos que nos podrán ayudar.");
+				System.out.println("+ Los caídos que nos invaden son peligrosos.");
+				break;
+			case 2:
+				System.out.println("+ Ya lo dijiste tú, nos invaden.");
+				System.out.println("+ ¿O lo dijiste en broma?");
+				System.out.println("+ Meh, da igual, ahora mismo algo muy real son los caídos.");
+				System.out.println("+ Si nos agarran estaremos muertos.");
+				System.out.println("+ Por eso ahora vamos donde unos conocidos.");
+				break;
+			case 3:
+				System.out.println("+ Además de lo de tu uña, nos invaden.");
+				System.out.println("+ Hacía mucho tiempo que esto no ocurria.");
+				System.out.println("+ Nos pilló desprevenidos la invasión de caídos.");
+				System.out.println("+ No importa, unos amigos nos ayudarán, se supone...");
+				break;
+			case 4:
+				System.out.println("+ Pues, según tú, nos invade un dios.");
+				System.out.println("+ Pero según yo solo son caídos.");
+				System.out.println("+ De cualquier modo, es mejor tener ayuda de otros.");
+				break;
+			}
+			System.out.println("+ A todo esto, ¿Qué eres? (HOMBRE/MUJER)");
+			break;
+		case 3:
+			System.out.println("+ Nada en especial, solamente que estabas en el suelo mientras huía.");
+			System.out.println("+ Si te negabas a venir conmigo, te iba a dejar morir.");
+			System.out.println("+ Pero ya que estamos en el mismo barco, intentemos salvarnos.");
+			System.out.println("+ Hey, a todo esto, ¿Qué eres? (HOMBRE/MUJER)");
+			break;
+		default:
+			System.out.println("+ ... ¿Para qué me esfuerzo siquiera?.");
+			System.out.println("+ Al menos dime tu género (HOMBRE/MUJER)");
+			break;
 		}
 	}
 }
