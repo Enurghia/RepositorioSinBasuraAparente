@@ -1,0 +1,2 @@
+# RepositorioSinBasuraAparente
+Aventura de Texto
