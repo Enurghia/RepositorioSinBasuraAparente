@@ -2,19 +2,17 @@ import java.util.Scanner;
 public class New {
 	private static Scanner sc;
 	public static void main(String[] args) {
-
 		sc = new Scanner(System.in);
-		int Respuesta;
-		int Respuesta2;
+		int [] RespuestaN = new int [10];
+		String []RespuestaE = new String [10];
 		String Nombre = new String ("");
 		String Sexo = new String ("");
-		String Respuesta3 = new String ("");
 		System.out.println("+ Wena, ¿Quién erí?");
 		System.out.print("	1. - No preguntí weás."+"\n"+
 		"	2. - No tengo idea, ayúdame!"
 		+"\n"+"	3. - ¿Quién eres?"+"\n");
-		Respuesta = sc.nextInt();
-		switch(Respuesta){
+		RespuestaN[0] = sc.nextInt();
+		switch(RespuestaN[0]){
 		case 1:
 			System.out.println("+ Ya... ¿Pa qué po'?");
 			break;
@@ -43,8 +41,8 @@ public class New {
 		"	2. - Las tropas del infierno están invadiendo el lugar!"
 		+"\n"+"	3. - Me quebré una uña!"+"\n"
 		+ "	4. - Kaatharis ha renacido!"+"\n");
-		Respuesta = sc.nextInt();
-		switch(Respuesta){
+		RespuestaN[1] = sc.nextInt();
+		switch(RespuestaN[1]){
 		case 1:
 			System.out.println("+ ... ¿Qué te has tomado?");
 			System.out.println("+ No enserio, que yo también quiero probar de eso ;D");
@@ -65,7 +63,7 @@ public class New {
 			break;
 		case 4:
 			System.out.println("+ Todos sabemos que Kaatharis murio hace mucho"
-					+ ", no me vengas con eso");
+					+ ", no me vengas con eso.");
 			System.out.println("+ Además la invasión de caídos jamás han sido lo suyo.");
 			System.out.println("+ Esto ya es algo diferente, deberíamos huir.");
 			System.out.println("+ Sígueme o moriremos antes de que nos demos cuenta.");
@@ -76,8 +74,8 @@ public class New {
 					"	2. - Las tropas del infierno están invadiendo el lugar!"
 					+"\n"+"	3. - Me quebré una uña!"+"\n"
 					+"	4. - Kaatharis ha renacido!"+"\n");
-			Respuesta = sc.nextInt();
-			switch(Respuesta){
+			RespuestaN[1] = sc.nextInt();
+			switch(RespuestaN[1]){
 			case 1:
 				System.out.println("+ Mejor pero... ¿Qué te has tomado?");
 				System.out.println("+ No enserio, que yo también quiero probar de eso ;D");
@@ -98,7 +96,7 @@ public class New {
 				break;
 			case 4:
 				System.out.println("+ Todos sabemos que Kaatharis murio hace mucho"
-						+ ", no me vengas con eso");
+						+ ", no me vengas con eso.");
 				System.out.println("+ Además la invasión de caídos jamás han sido lo suyo.");
 				System.out.println("+ Esto ya es algo diferente, deberíamos huir.");
 				System.out.println("+ Sígueme o moriremos antes de que nos demos cuenta.");
@@ -110,32 +108,24 @@ public class New {
 				break;
 			}
 		}
-		System.out.println("+ ¿No hay problema? (y/n)");
-		Respuesta3 = sc.next();
-		switch (Respuesta3){
-			case "y": System.out.println("Wena, ahora, rápido!"); break;
-			case "yes": System.out.println("Wena, ahora, rápido!"); break;
+		System.out.println("+ ¿Vamos? (Y/N)");
+		RespuestaE[0] = sc.next();
+		RespuestaE[0] = RespuestaE[0].toUpperCase();
+		switch (RespuestaE[0]){
 			case "Y": System.out.println("Wena, ahora, rápido!"); break;
-			case "Yes": System.out.println("Wena, ahora, rápido!"); break;
 			case "YES": System.out.println("Wena, ahora, rápido!"); break;
-			case "s": System.out.println("Wena, ahora, rápido!"); break;
-			case "si": System.out.println("Wena, ahora, rápido!"); break;
 			case "S": System.out.println("Wena, ahora, rápido!"); break;
-			case "Si": System.out.println("Wena, ahora, rápido!"); break;
 			case "SI": System.out.println("Wena, ahora, rápido!"); break;
-			case "n": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
-			case "no": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
 			case "N": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
-			case "No": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
 			case "NO": System.out.println("Weno, bien por ti, yo me voy!"+"\n"+"	- Has muerto"); System.exit(0); break;
-			default:  System.out.println("No entiendo niuna weá! Chucha, llegaron..."+"\n"+"	- Has muerto");  System.exit(0); break;
+			default:  System.out.println("No entiendo niuna weá, chucha, llegaron..."+"\n"+"	- Has muerto");  System.exit(0); break;
 		}
-		System.out.println("	*	*	*	"+"\n"+"- Corrimos un rato sin decir nada -.");
-		System.out.print("	1. - ¿Dónde vamos?."+"\n"+
+		System.out.println("	*	*	*	"+"\n"+"- Corrimos un rato sin decir nada -");
+		System.out.print("	1. - ¿Dónde vamos?"+"\n"+
 		"	2. - Espera, realmente, ¿Qué está ocurriendo?"
 		+"\n"+"	3. - ¿Por qué me ayudas?"+"\n");
-		Respuesta2 = sc.nextInt();
-		switch(Respuesta2){
+		RespuestaE[2] = sc.next();
+		switch(RespuestaN[2]){
 		case 1:
 			System.out.println("+ Mmmh? No muy lejos hay unas personas que nos podrían ayudar.");
 			System.out.println("+ Podremos luchar contra los caídos si es que nos unimos.");
@@ -143,7 +133,7 @@ public class New {
 			System.out.println("+ No seas... Uh... Espera, ¿Qué eres? (HOMBRE/MUJER)");
 			break;
 		case 2:
-			switch(Respuesta){
+			switch(RespuestaN[1]){
 			case 1:
 				System.out.println("+ Espera, ¿Acaso lo que me dijiste no era en serio?");
 				System.out.println("+ Me siento algo estafado...");
@@ -168,6 +158,12 @@ public class New {
 				System.out.println("+ Pero según yo solo son caídos.");
 				System.out.println("+ De cualquier modo, es mejor tener ayuda de otros.");
 				break;
+			default:
+				System.out.println("+ Quisiera que tú tambien me respondieras eso");
+				System.out.println("+ Antes cuando pregunté sobre si pasaba algo, solo dijiste cosas incoherentes");
+				System.out.println("+ Pero bueno, ahora vamos donde unos conocidos que nos podrán ayudar.");
+				System.out.println("+ No quiero ser devorado por los caídos.");
+				break;
 			}
 			System.out.println("+ A todo esto, ¿Qué eres? (HOMBRE/MUJER)");
 			break;
@@ -178,9 +174,35 @@ public class New {
 			System.out.println("+ Hey, a todo esto, ¿Qué eres? (HOMBRE/MUJER)");
 			break;
 		default:
-			System.out.println("+ ... ¿Para qué me esfuerzo siquiera?.");
-			System.out.println("+ Al menos dime tu género (HOMBRE/MUJER)");
+			System.out.println("+ Bueno, ahora que hablas bien supongo que está bien.");
+			System.out.println("+ Un ejercito de caídos empezó a invadir el pueblo esta tarde.");
+			System.out.println("+ Muchos muertos, me sorprende que te hayas salvado.");
+			System.out.println("+ Por cierto, ¿Qué eres? (HOMBRE/MUJER)");
 			break;
 		}
+		Sexo = sc.next();
+		Sexo = Sexo.toUpperCase();
+		switch (Sexo){
+		case "MUJER": System.out.println("+ Vaya, algo inesperado... Solo espero que sea verdad :x");
+			System.out.print("	1. - ¿Por qué?"+"\n"+
+					"	2. - Oye, eso ofende viejo."
+					+"\n");
+			RespuestaN[3] = sc.nextInt();
+			switch (RespuestaN[3]) {
+			case 1: System.out.println("+ Eh... Nada, nada sexista xd"); break;
+			case 2: System.out.println("+ Ya, ya, perdóname, no fue intencionado xd"); break;
+			default: System.out.println("+ Espera, ¿Qué?"+"\n"+"+ Bah, da igual."); break;
+			}
+			
+			break;
+		case "HOMBRE": System.out.println("+ Bueno, lo típico por estos lares, supongo."); break;
+		case "HELICOPTERO": System.out.println("+ Que curioso, no sabía que aún había gente así :x"); break;
+		case "OTRO": System.out.println("+ Oh... Pues... Bueno, lo respeto :X");break;
+		case "GODZILLA": System.out.println("+ Pues... Que bien, supongo :x");break;
+		default:  System.out.println("+ ... Okay...?");break;
+		}
+		System.out.println("+ Tienes cara de dudas, ¿Alguna pregunta?");
+		System.out.print("	1. - ¿Quien eres?"+"\n"+
+		"	2. - ¿Quienes son los caídos?"+"\n");
 	}
 }
