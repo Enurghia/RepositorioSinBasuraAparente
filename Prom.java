@@ -1,4 +1,5 @@
-package Cal;
+package promedio;
+
 public class Prom {
 	public static double Promedio (double [] Promedio, int Cantidad) {
 		double acumular = 0;
