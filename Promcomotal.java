@@ -121,6 +121,85 @@ public class Promcomotal {
 			//Cursos definidos
 			else {
 				for(int i = 0; i < (int)Prom.Delta(A); i++) {
+					while(aux == true) {
+						System.out.print("Ingrese el nombre el estudiante sin usar la tecla [ESPACIO]."
+								+"\n"+"Tras ingresar el nombre, pulse [ENTER] para continuar."
+								+"\n"+"Si ya acabó de ingresar estudiantes, pulse [0] y luego [ENTER]"
+								+"\n"+"Lleva "+N_Estud+" estudiantes."
+								+"\n");
+						acumulador = 0;
+						Estudiantes = sc.next();
+						//Si es que se terminan de ingresar los estudiantes
+						if(Estudiantes.equals("0")) {
+							break;
+						}
+						else {
+							Dat += Estudiantes;
+							N_Estud++;
+							System.out.print("Ingrese la cantidad de notas del estudiante."
+								+"\n"+"Si el número de notas es indefinido, ingrese 0 para añadir una a una"
+								+"\n"+"Tras ingresar la cantidad de nota presione [ENTER]"
+								+"\n");
+							//Discriminar si es que se poseen las notas
+							B = sc.next();
+							N_Notas = 0;
+							//Sin notas definidas
+							if(B.equals("0")) {
+								while((int)Prom.Delta(B) == 0) {
+									System.out.println("Ingrese una nota del estudiante (entre 1 y 7)"
+										+"\n"+"Tras ingresar una nota, pulse [ENTER] para continuar"
+										+"\n"+"Si ya acabó de ingresar notas, pulse [0] y luego [ENTER]"
+										+"\n"+"Lleva "+N_Notas+" notas."
+										+"\n");
+									C = sc.next();
+									if((int)Prom.Delta(C) == 0) {
+										Dat += "	"+"Promedio final:	"+Prom.PromedioAc(acumulador, N_Notas);
+										acumulador2 += Prom.PromedioAc(acumulador, N_Notas);
+										B = "1";
+									}
+									else {
+										if((Prom.Delta(C)<1)||(Prom.Delta(C)>7)) {
+											System.out.println("Esa nota no es válida.");
+										}
+										else {
+											Dat += "	"+Prom.Delta(C);
+											N_Notas++;
+											acumulador += Prom.Delta(C);
+										}
+									}
+								}
+								Dat += "\n";
+								System.out.println(Dat);
+							}
+							//Con notas definidas
+							else {
+								for(int j = 0; j < (int)Prom.Delta(B); j++) {
+									System.out.println("Ingrese la nota número "+(N_Notas+1)+"."
+											+"\n"+"Tras ingresar una nota, pulse [ENTER] para continuar");
+									C = sc.next();
+									if((Prom.Delta(C)<1)||(Prom.Delta(C)>7)) {
+										j--;
+										System.out.println("Esa nota no es válida.");
+									}
+									else {
+										Dat += "	"+Prom.Delta(C);
+										N_Notas++;
+										acumulador += Prom.Delta(C);
+									}
+								}
+								Dat += "	"+"Promedio final:	"+Prom.PromedioAc(acumulador, N_Notas)+"\n";
+								acumulador2 += Prom.PromedioAc(acumulador, N_Notas);
+								System.out.println(Dat);
+							}
+						}
+					}
+					//Acaba de ingresar datos de 1 curso
+					Dat += "\n"+"Promedio del curso "+N_Curso+":"+"	"+Prom.PromedioAc(acumulador2, N_Estud)+"\n";
+					System.out.println(Dat);
+					acumulador2 = 0;
+					N_Estud = 0;
+					Dat += "Curso "+(N_Curso+1)+":"+"\n";
+					N_Curso++;
 				}
 			}
 		}
