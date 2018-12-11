@@ -1,5 +1,4 @@
-package promedio;
-
+package Cal;
 public class Prom {
 	public static double Promedio (double [] Promedio, int Cantidad) {
 		double acumular = 0;
@@ -37,7 +36,7 @@ public class Prom {
 			return resultado;
 		}
 		else {
-			double resultado = Double.valueOf(("0"+arreglar+"0"));
+			double resultado = Double.valueOf(("0"+arreglar));
 			return resultado;
 		}
 	}
