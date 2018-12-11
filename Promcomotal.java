@@ -121,12 +121,6 @@ public class Promcomotal {
 			//Cursos definidos
 			else {
 				for(int i = 0; i < (int)Prom.Delta(A); i++) {
-					System.out.print("Ingrese la cantidad de estudiantes que hay en sala."
-						+"\n"+"Si el número de estudiantes es indefinido, ingrese 0 para añadir uno a uno"
-						+"\n"+"Tras ingresar la cantidad de estudiantes presione [ENTER]"
-						+"\n");
-					B = sc.next();
-					double [] notas = new double [(int)Prom.Delta(B)];
 				}
 			}
 		}
