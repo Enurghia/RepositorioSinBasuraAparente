@@ -3,12 +3,21 @@
 		<title>Schwarze Sonne</title>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 	</head>
-	<body bgcolor="000000">
-		<br align="center">
-		<frameset cols="10%,*,10%" rows="*">
-			<frame src=".../data/FrameLeft">
-			<frame src=".../data/Content">
-			<frame src=".../data/FrameRigth">
-		</frameset>
-	</body>
+<frameset cols="10%,*,10%" frameborder="NO" border="0" rows="*"> 
+  <frame name="leftBlankFrame" scrolling="NO" noresize src="data/Blank.htm">
+  <frameset rows="128px,*" frameborder="NO" border="0" cols="*"> 
+    <frame name="titleFrame" scrolling="NO" noresize src="data/Title.htm" >
+    <frameset cols="128px,*" frameborder="NO" border="0" rows="*"> 
+      <frame name="leftBorderFrame" scrolling="NO" noresize src="data/FrameLeft.htm">
+      <frameset cols="*,128px" frameborder="NO" border="0" rows="*"> 
+        <frame name="mainFrame" src="data/Content.htm">
+        <frame name="rightBorderFrame" noresize src="data/FrameRight.htm">
+      </frameset>
+    </frameset>
+  </frameset>
+  <frame src="data/Blank.htm">
+</frameset>
+<noframes><body bgcolor="#FFFFFF" text="#000000">
+
+</body></noframes>
 </html>
