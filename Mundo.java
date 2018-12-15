@@ -6,7 +6,6 @@ public class Mundo {
 		BufferedWriter BW = null;
 		FileWriter FW = null;
 		File file = new File("Datos.txt");
-		
 		try {
 			if(!file.exists()) {
 				file.createNewFile();
@@ -25,7 +24,46 @@ public class Mundo {
 			e.printStackTrace();
 		}
 		finally {
-			
+			try {
+				if(BW != null) {
+					BW.close();
+				}
+				if(FW != null) {
+					FW.close();
+				}
+			}
+			catch (IOException e){
+				e.printStackTrace();
+			}
+		}
+		FileReader FR = null;
+		BufferedReader BR = null;
+		try {
+			FR = new FileReader(file.getAbsoluteFile());
+			BR = new BufferedReader(FR);
+			String lectura = BR.readLine();
+			int i = 1;
+			while(lectura != null) {
+				System.out.println("Linea "+i+" - "+lectura);
+				lectura = BR.readLine();
+				i++;
+			}
+		}
+		catch (IOException e){
+			e.printStackTrace();
+		}
+		finally {
+			try {
+				if(BR != null) {
+					BR.close();
+				}
+				if(FR != null) {
+					FR.close();
+				}
+			}
+			catch (IOException e){
+				e.printStackTrace();
+			}
 		}
 	}
 }
