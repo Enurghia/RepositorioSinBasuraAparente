@@ -1,0 +1,22 @@
+Los nombres del personajes deben ser ÚNICOS.
+https://drive.google.com/drive/folders/1QBu3ig2QQp8Z7lBLzEPeIXK0aeeIpTe7?fbclid=IwAR01UnylOhpr1x4ayMNEUDjJGmMsVMZSEDLXy2STTrMyS5D2SP2E5lb95uA
+
+La arquitectura de Aplicaciones
+  arquitecturas centralizadas/monoliticas
+  
+  presentación/vista
+  datos/modelo
+  controladores/reglas de negocio/lógica
+  
+La arquitectura cliente/servidor
+  cliente = vista
+  
+  servidor = controlador y modelo
+  
+La arquitectura orientada a servicios
+  por tiers (Niveles de evaluaciones)
+
+  diseño de 3 capas
+    -usuario
+    -negocios
+    -datos
